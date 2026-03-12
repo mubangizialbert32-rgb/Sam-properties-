@@ -1,0 +1,519 @@
+Here it is! Long press on the code below, tap Select All then Copy:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sam Properties Uganda</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--blk:#080808;--wht:#F8F4EE;--gold:#B8860B;--gold2:#E4B94A;--grey:#161616;--grey2:#222;--muted:#666;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--blk);color:var(--wht);font-family:'DM Sans',Arial,sans-serif;overflow-x:hidden;}
+::selection{background:var(--gold);color:var(--blk);}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-track{background:var(--blk);}::-webkit-scrollbar-thumb{background:var(--gold);}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:24px 52px;transition:all .4s;}
+nav.on{background:rgba(8,8,8,.95);backdrop-filter:blur(20px);padding:14px 52px;border-bottom:1px solid rgba(184,134,11,.1);}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-box{width:32px;height:32px;border:1px solid var(--gold);transform:rotate(45deg);display:flex;align-items:center;justify-content:center;}
+.logo-box span{transform:rotate(-45deg);font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:14px;color:var(--gold);}
+.logo-txt{font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;font-weight:600;letter-spacing:5px;color:var(--wht);text-transform:uppercase;}
+.logo-sub{font-size:7px;letter-spacing:5px;color:rgba(184,134,11,.4);text-transform:uppercase;margin-top:1px;}
+.nav-mid{display:flex;gap:36px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
+.nav-mid a{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(248,244,238,.38);text-decoration:none;transition:color .3s;}
+.nav-mid a:hover{color:var(--gold2);}
+.nav-r{display:flex;align-items:center;gap:16px;}
+.nav-tel{font-size:11px;color:rgba(248,244,238,.3);text-decoration:none;transition:color .3s;}
+.nav-btn{border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:10px 20px;text-decoration:none;transition:all .3s;}
+.nav-btn:hover{background:var(--gold);color:var(--blk);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:2px;}
+.hbg span{display:block;width:22px;height:1px;background:var(--wht);}
+.hero{height:100vh;min-height:680px;display:grid;grid-template-columns:55% 45%;position:relative;overflow:hidden;}
+.hero-l{display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 88px 52px;z-index:2;}
+.hero-r{position:relative;background:linear-gradient(145deg,#100C00,#1A1400,#060606);}
+.h-tag{font-size:9px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:24px;opacity:0;animation:fu .7s .2s forwards;}
+.h-tag::before{content:'';width:28px;height:1px;background:var(--gold);}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(58px,6vw,90px);font-weight:300;line-height:1.0;color:var(--wht);margin-bottom:28px;opacity:0;animation:fu .7s .4s forwards;}
+h1 em{font-style:italic;color:var(--gold2);display:block;}
+.h-desc{font-size:13px;line-height:1.85;color:rgba(248,244,238,.4);max-width:390px;margin-bottom:40px;font-weight:300;opacity:0;animation:fu .7s .6s forwards;}
+.h-btns{display:flex;align-items:center;gap:20px;opacity:0;animation:fu .7s .8s forwards;}
+.btn-g{background:var(--gold);color:var(--blk);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;padding:15px 32px;text-decoration:none;transition:all .3s;display:inline-block;}
+.h-nums{display:flex;gap:40px;margin-top:56px;padding-top:32px;border-top:1px solid rgba(248,244,238,.06);opacity:0;animation:fu .7s 1s forwards;}
+.hn-v{font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:600;color:var(--wht);line-height:1;}
+.hn-l{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+.city-art{position:absolute;bottom:0;left:0;right:0;opacity:.45;}
+@keyframes fu{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.ticker{background:var(--gold);overflow:hidden;padding:10px 0;}
+.t-track{display:flex;white-space:nowrap;animation:tick 28s linear infinite;}
+.ti{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--blk);font-weight:500;padding:0 32px;}
+.td{opacity:.3;margin:0 6px;}
+@keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+section{padding:110px 52px;}
+.ey{font-size:9px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:16px;font-weight:500;}
+.ey::before{content:'';width:24px;height:1px;background:var(--gold);}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(36px,4vw,60px);font-weight:300;color:var(--wht);line-height:1.1;margin-bottom:16px;}
+h2 em{font-style:italic;color:var(--gold2);}
+.sub{font-size:13px;line-height:1.9;color:rgba(248,244,238,.4);font-weight:300;}
+.services{background:var(--grey);}
+.svc-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:80px;align-items:start;max-width:1200px;margin:0 auto;}
+.svc-list{display:flex;flex-direction:column;gap:1px;margin-top:8px;}
+.svc-row{background:var(--blk);padding:34px 30px;display:flex;align-items:center;gap:22px;border-left:2px solid transparent;transition:all .35s;}
+.svc-row:hover{border-left-color:var(--gold);background:var(--grey2);padding-left:38px;}
+.svc-n{font-family:'Cormorant Garamond',Georgia,serif;font-size:12px;font-weight:600;color:rgba(184,134,11,.3);width:20px;flex-shrink:0;}
+.svc-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600;color:var(--wht);margin-bottom:5px;}
+.svc-desc{font-size:12px;line-height:1.7;color:rgba(248,244,238,.35);font-weight:300;}
+.svc-arr{color:rgba(184,134,11,.2);font-size:16px;transition:all .3s;margin-left:auto;}
+.locations{background:var(--blk);padding:110px 0 110px 52px;}
+.loc-grid{display:grid;grid-template-columns:240px 1fr;gap:52px;}
+.loc-left{position:sticky;top:110px;}
+.loc-scroll{display:flex;gap:18px;overflow-x:auto;padding-right:52px;scrollbar-width:none;}
+.loc-card{flex:0 0 300px;border:1px solid rgba(248,244,238,.05);overflow:hidden;transition:all .4s;}
+.loc-vis{height:260px;position:relative;overflow:hidden;}
+.loc-bg{position:absolute;inset:0;}
+.lk{background:linear-gradient(150deg,#0C1824,#162840,#060C14);}
+.le{background:linear-gradient(150deg,#08180E,#102816,#040C08);}
+.ln{background:linear-gradient(150deg,#180E04,#261404,#0C0802);}
+.lko{background:linear-gradient(150deg,#080C1A,#101826,#040810);}
+.lm{background:linear-gradient(150deg,#100818,#1A1022,#080410);}
+.loc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.9),transparent 55%);}
+.loc-pill{position:absolute;top:14px;left:14px;background:rgba(8,8,8,.55);border:1px solid rgba(184,134,11,.25);font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);padding:5px 11px;}
+.loc-bot{position:absolute;bottom:0;left:0;right:0;padding:20px 18px;}
+.loc-city{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;color:#fff;}
+.loc-tagline{font-size:9px;color:rgba(184,134,11,.55);letter-spacing:2px;margin-top:2px;font-style:italic;}
+.loc-foot{padding:16px 18px;background:var(--grey);display:flex;gap:8px;flex-wrap:wrap;}
+.loc-tag{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(248,244,238,.3);padding:4px 9px;border:1px solid rgba(248,244,238,.07);}
+.properties{background:var(--grey);}
+.props-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:20px;max-width:1200px;margin-left:auto;margin-right:auto;}
+.filters{display:flex;gap:3px;margin-top:18px;}
+.fb{font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:8px 16px;border:1px solid rgba(248,244,238,.09);background:none;color:rgba(248,244,238,.38);cursor:pointer;transition:all .3s;}
+.fb.act,.fb:hover{border-color:var(--gold);color:var(--gold);}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:1200px;margin:0 auto;}
+.pc{background:var(--blk);overflow:hidden;transition:transform .4s;}
+.pv{height:230px;position:relative;display:flex;align-items:center;justify-content:center;}
+.p1{background:linear-gradient(145deg,#0C1420,#182A40);}
+.p2{background:linear-gradient(145deg,#0A1810,#142C1A);}
+.p3{background:linear-gradient(145deg,#1A1000,#2C1A00);}
+.p4{background:linear-gradient(145deg,#0E0A1A,#1A1030);}
+.p5{background:linear-gradient(145deg,#0A1420,#102034);}
+.p6{background:linear-gradient(145deg,#140A00,#201200);}
+.p7{background:linear-gradient(145deg,#0A0A1A,#101025);}
+.p8{background:linear-gradient(145deg,#060A12,#0C1220);}
+.p-type{position:absolute;top:14px;left:14px;background:var(--gold);color:var(--blk);font-size:7px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:5px 9px;}
+.p-loc{position:absolute;top:14px;right:14px;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);}
+.pb{padding:22px 22px 26px;}
+.p-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;color:var(--wht);margin-bottom:3px;}
+.p-addr{font-size:10px;color:rgba(184,134,11,.45);letter-spacing:.5px;margin-bottom:16px;}
+.p-price-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;}
+.p-from{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
+.p-price{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:600;color:var(--gold2);}
+.p-per{font-size:9px;color:var(--muted);margin-left:3px;font-weight:300;}
+.p-badge{font-size:7px;letter-spacing:1px;text-transform:uppercase;background:rgba(184,134,11,.09);border:1px solid rgba(184,134,11,.18);color:var(--gold);padding:4px 9px;}
+.p-div{height:1px;background:rgba(248,244,238,.04);margin-bottom:12px;}
+.p-meta{display:flex;gap:14px;}
+.p-meta span{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:rgba(248,244,238,.28);}
+.about{background:var(--blk);}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;max-width:1200px;margin:0 auto;}
+.founder{position:relative;aspect-ratio:4/5;max-width:400px;}
+.f-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--grey),var(--grey2));border:1px solid rgba(184,134,11,.13);}
+.f-accent{position:absolute;bottom:-16px;right:-16px;width:55%;height:55%;border:1px solid rgba(184,134,11,.1);}
+.f-mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:130px;font-weight:700;color:rgba(184,134,11,.07);z-index:1;}
+.f-info{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(8,8,8,.95),transparent);padding:38px 26px 22px;z-index:2;}
+.f-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;font-weight:600;color:var(--wht);}
+.f-role{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-top:5px;}
+.a-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:23px;font-weight:300;font-style:italic;color:rgba(248,244,238,.65);line-height:1.5;border-left:2px solid var(--gold);padding-left:22px;margin-bottom:28px;}
+.a-text{font-size:13px;line-height:1.9;color:rgba(248,244,238,.4);margin-bottom:32px;font-weight:300;}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.pillar{padding:18px;border:1px solid rgba(248,244,238,.05);}
+.pl-icon{font-size:18px;margin-bottom:9px;}
+.pl-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;font-weight:600;color:var(--wht);margin-bottom:5px;}
+.pl-text{font-size:11px;line-height:1.7;color:rgba(248,244,238,.3);}
+.why{background:var(--grey);padding:100px 52px;}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:60px;max-width:1200px;}
+.wc{background:var(--blk);padding:40px 28px;position:relative;overflow:hidden;}
+.wn{font-family:'Cormorant Garamond',Georgia,serif;font-size:60px;font-weight:700;color:rgba(184,134,11,.05);position:absolute;top:8px;right:14px;line-height:1;}
+.wi{font-size:26px;margin-bottom:20px;}
+.wt{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;color:var(--wht);margin-bottom:9px;}
+.wd{font-size:12px;line-height:1.8;color:rgba(248,244,238,.37);font-weight:300;}
+.contact{background:var(--blk);}
+.ct-wrap{display:grid;grid-template-columns:1fr 1fr;gap:76px;max-width:1200px;margin:0 auto;}
+.ct-details{display:flex;flex-direction:column;gap:16px;margin-top:40px;}
+.cd{display:flex;align-items:flex-start;gap:14px;padding:18px;border:1px solid rgba(248,244,238,.04);}
+.cd-ic{width:38px;height:38px;border:1px solid rgba(184,134,11,.22);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.cd-lbl{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.cd-val{font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;color:var(--wht);}
+.cf{display:flex;flex-direction:column;gap:13px;}
+.cf2{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.cg{display:flex;flex-direction:column;gap:6px;}
+.cl{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);}
+.ci,.cs,.cta{background:var(--grey);border:1px solid rgba(248,244,238,.07);color:var(--wht);font-size:13px;font-weight:300;padding:13px 15px;outline:none;width:100%;}
+.cs{appearance:none;cursor:pointer;}
+.cta{resize:none;height:95px;}
+.csub{background:var(--gold);color:var(--blk);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;padding:17px;border:none;cursor:pointer;width:100%;}
+footer{background:var(--grey);border-top:1px solid rgba(184,134,11,.09);padding:60px 52px 26px;}
+.ft{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:52px;padding-bottom:44px;border-bottom:1px solid rgba(248,244,238,.04);}
+.fb-brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;letter-spacing:4px;color:var(--wht);margin-bottom:5px;}
+.fb-tag{font-size:8px;letter-spacing:4px;color:rgba(184,134,11,.35);text-transform:uppercase;margin-bottom:14px;}
+.fb-desc{font-size:12px;line-height:1.8;color:rgba(248,244,238,.25);max-width:240px;font-weight:300;}
+.fc-title{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.fc-links{display:flex;flex-direction:column;gap:11px;list-style:none;}
+.fc-links a{font-size:13px;color:rgba(248,244,238,.27);text-decoration:none;}
+.fb-bot{display:flex;align-items:center;justify-content:space-between;padding-top:22px;flex-wrap:wrap;gap:10px;}
+.fc{font-size:10px;letter-spacing:2px;color:rgba(248,244,238,.12);}
+.fe{font-size:9px;letter-spacing:3px;color:rgba(184,134,11,.18);text-transform:uppercase;}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.on{opacity:1;transform:translateY(0);}
+@media(max-width:960px){
+nav{padding:16px 22px;}
+.nav-mid,.nav-tel{display:none;}.hbg{display:flex;}
+.hero{grid-template-columns:1fr;}.hero-r{display:none;}
+.hero-l{padding:110px 22px 56px;}
+section{padding:80px 22px;}
+.svc-grid,.about-wrap,.ct-wrap{grid-template-columns:1fr;gap:44px;}
+.pg,.why-grid{grid-template-columns:1fr 1fr;}
+.ft{grid-template-columns:1fr 1fr;gap:28px;}
+.cf2{grid-template-columns:1fr;}
+.locations{padding:80px 0 80px 22px;}
+.loc-grid{grid-template-columns:1fr;}.loc-left{position:static;}
+.pillars{grid-template-columns:1fr;}
+}
+@media(max-width:580px){
+.pg,.why-grid{grid-template-columns:1fr;}
+.ft{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="#home" class="logo">
+    <div class="logo-box"><span>S</span></div>
+    <div><div class="logo-txt">Sam</div><div class="logo-sub">Properties</div></div>
+  </a>
+  <ul class="nav-mid">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#locations">Locations</a></li>
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <div class="nav-r">
+    <a href="tel:+256751015439" class="nav-tel">+256 751 015 439</a>
+    <a href="#contact" class="nav-btn">Enquire</a>
+  </div>
+  <button class="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<section class="hero" id="home">
+  <div class="hero-l">
+    <div class="h-tag">Est. 2023 · Uganda</div>
+    <h1>Redefining<br/><em>Property</em><br/>in Uganda</h1>
+    <p class="h-desc">Premium apartments, 5-star short stays &amp; commercial spaces across Kampala, Kololo, Entebbe, Ntinda and Mbarara.</p>
+    <div class="h-btns">
+      <a href="#properties" class="btn-g">View Properties</a>
+      <a href="#contact" style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(248,244,238,.4);text-decoration:none;">Get in Touch →</a>
+    </div>
+    <div class="h-nums">
+      <div><div class="hn-v">50+</div><div class="hn-l">Properties</div></div>
+      <div><div class="hn-v">5</div><div class="hn-l">Locations</div></div>
+      <div><div class="hn-v">200+</div><div class="hn-l">Clients</div></div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <svg viewBox="0 0 480 580" fill="none" width="100%" height="100%" style="position:absolute;bottom:0;opacity:.5">
+      <rect x="30" y="200" width="58" height="380" fill="#B8860B" opacity=".18"/>
+      <rect x="22" y="192" width="74" height="10" fill="#B8860B" opacity=".26"/>
+      <rect x="105" y="118" width="98" height="462" fill="#B8860B" opacity=".22"/>
+      <rect x="97" y="108" width="114" height="12" fill="#B8860B" opacity=".3"/>
+      <line x1="154" y1="108" x2="154" y2="82" stroke="#B8860B" stroke-width="3" opacity=".38"/>
+      <rect x="112" y="128" width="11" height="10" fill="#B8860B" opacity=".44"/><rect x="130" y="128" width="11" height="10" fill="#B8860B" opacity=".44"/>
+      <rect x="148" y="128" width="11" height="10" fill="#B8860B" opacity=".44"/><rect x="166" y="128" width="11" height="10" fill="#B8860B" opacity=".44"/>
+      <rect x="112" y="146" width="11" height="10" fill="#B8860B" opacity=".44"/><rect x="130" y="146" width="11" height="10" fill="#B8860B" opacity=".44"/>
+      <rect x="148" y="146" width="11" height="10" fill="#B8860B" opacity=".44"/><rect x="166" y="146" width="11" height="10" fill="#B8860B" opacity=".44"/>
+      <rect x="222" y="155" width="72" height="425" fill="#B8860B" opacity=".18"/>
+      <rect x="214" y="146" width="88" height="11" fill="#B8860B" opacity=".26"/>
+      <rect x="340" y="240" width="54" height="340" fill="#B8860B" opacity=".14"/>
+      <rect x="410" y="290" width="70" height="290" fill="#B8860B" opacity=".11"/>
+      <line x1="0" y1="578" x2="480" y2="578" stroke="#B8860B" stroke-width="2" opacity=".3"/>
+    </svg>
+  </div>
+</section>
+<div class="ticker">
+  <div class="t-track">
+    <span class="ti">Apartments</span><span class="td">✦</span>
+    <span class="ti">5-Star Short Stays</span><span class="td">✦</span>
+    <span class="ti">Commercial Spaces</span><span class="td">✦</span>
+    <span class="ti">Kampala</span><span class="td">✦</span>
+    <span class="ti">Kololo</span><span class="td">✦</span>
+    <span class="ti">Entebbe</span><span class="td">✦</span>
+    <span class="ti">Ntinda</span><span class="td">✦</span>
+    <span class="ti">Mbarara</span><span class="td">✦</span>
+    <span class="ti">Apartments</span><span class="td">✦</span>
+    <span class="ti">5-Star Short Stays</span><span class="td">✦</span>
+    <span class="ti">Commercial Spaces</span><span class="td">✦</span>
+    <span class="ti">Kampala</span><span class="td">✦</span>
+    <span class="ti">Kololo</span><span class="td">✦</span>
+    <span class="ti">Entebbe</span><span class="td">✦</span>
+    <span class="ti">Ntinda</span><span class="td">✦</span>
+    <span class="ti">Mbarara</span><span class="td">✦</span>
+  </div>
+</div>
+<section class="services reveal" id="services">
+  <div class="svc-grid">
+    <div>
+      <div class="ey">What We Offer</div>
+      <h2>Three Ways<br/>to <em>Live Well</em></h2>
+      <p class="sub" style="margin-top:14px">Whether you need a home, a getaway, or a business address — Sam Properties has you covered.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-row"><div class="svc-n">01</div><div><div class="svc-name">Apartments &amp; Rentals</div><div class="svc-desc">Premium residential apartments for long-term rental.</div></div><div class="svc-arr">→</div></div>
+      <div class="svc-row"><div class="svc-n">02</div><div><div class="svc-name">5-Star Short Stays</div><div class="svc-desc">Beautifully appointed apartments for tourists &amp; business travellers.</div></div><div class="svc-arr">→</div></div>
+      <div class="svc-row"><div class="svc-n">03</div><div><div class="svc-name">Commercial Spaces</div><div class="svc-desc">Office suites &amp; retail units in prime business districts.</div></div><div class="svc-arr">→</div></div>
+    </div>
+  </div>
+</section>
+<section class="locations reveal" id="locations">
+  <div class="loc-grid">
+    <div class="loc-left">
+      <div class="ey">Where We Are</div>
+      <h2>5 Prime<br/><em>Locations</em></h2>
+      <p class="sub" style="margin-top:14px">From Kampala's heartbeat to Mbarara's emerging skyline.</p>
+    </div>
+    <div class="loc-scroll">
+      <div class="loc-card"><div class="loc-vis"><div class="loc-bg lk"></div><div class="loc-ov"></div><div class="loc-pill">Capital City</div>
+        <svg style="position:absolute;bottom:0;opacity:.45" viewBox="0 0 300 160" fill="none" width="100%" height="130">
+          <rect x="8" y="38" width="44" height="122" fill="#B8860B" opacity=".26"/><rect x="60" y="18" width="58" height="142" fill="#B8860B" opacity=".2"/>
+          <rect x="185" y="28" width="72" height="132" fill="#B8860B" opacity=".23"/><line x1="0" y1="158" x2="300" y2="158" stroke="#B8860B" stroke-width="1.5" opacity=".32"/>
+        </svg>
+        <div class="loc-bot"><div class="loc-city">Kampala</div><div class="loc-tagline">Pearl of Africa's Capital</div></div></div>
+        <div class="loc-foot"><div class="loc-tag">Offices</div><div class="loc-tag">Apartments</div><div class="loc-tag">Airbnb</div></div></div>
+      <div class="loc-card"><div class="loc-vis"><div class="loc-bg lko"></div><div class="loc-ov"></div><div class="loc-pill">Hilltop Elite</div>
+        <svg style="position:absolute;bottom:0;opacity:.45" viewBox="0 0 300 160" fill="none" width="100%" height="130">
+          <rect x="4" y="28" width="62" height="132" fill="#B8860B" opacity=".24"/><rect x="158" y="14" width="82" height="146" fill="#B8860B" opacity=".26"/>
+          <line x1="0" y1="158" x2="300" y2="158" stroke="#B8860B" stroke-width="1.5" opacity=".32"/>
+        </svg>
+        <div class="loc-bot"><div class="loc-city">Kololo</div><div class="loc-tagline">Kampala's Most Prestigious Hill</div></div></div>
+        <div class="loc-foot"><div class="loc-tag">Luxury</div><div class="loc-tag">Executive</div><div class="loc-tag">Airbnb</div></div></div>
+      <div class="loc-card"><div class="loc-vis"><div class="loc-bg le"></div><div class="loc-ov"></div><div class="loc-pill">Lakeside</div>
+        <svg style="position:absolute;bottom:0;opacity:.45" viewBox="0 0 300 160" fill="none" width="100%" height="130">
+          <rect x="108" y="44" width="68" height="116" fill="#B8860B" opacity=".2"/>
+          <path d="M0,144 Q75,136 150,144 Q225,152 300,144" stroke="#B8860B" stroke-width="1" opacity=".18" fill="none"/>
+          <line x1="0" y1="158" x2="300" y2="158" stroke="#B8860B" stroke-width="1.5" opacity=".32"/>
+        </svg>
+        <div class="loc-bot"><div class="loc-city">Entebbe</div><div class="loc-tagline">Lakeside Serenity &amp; Airport Access</div></div></div>
+        <div class="loc-foot"><div class="loc-tag">5-Star Apts</div><div class="loc-tag">Short Stays</div><div class="loc-tag">Airbnb</div></div></div>
+      <div class="loc-card"><div class="loc-vis"><div class="loc-bg ln"></div><div class="loc-ov"></div><div class="loc-pill">Upscale Suburb</div>
+        <svg style="position:absolute;bottom:0;opacity:.45" viewBox="0 0 300 160" fill="none" width="100%" height="130">
+          <rect x="6" y="54" width="52" height="106" fill="#B8860B" opacity=".22"/><rect x="134" y="26" width="68" height="134" fill="#B8860B" opacity=".24"/>
+          <line x1="0" y1="158" x2="300" y2="158" stroke="#B8860B" stroke-width="1.5" opacity=".32"/>
+        </svg>
+        <div class="loc-bot"><div class="loc-city">Ntinda</div><div class="loc-tagline">Kampala's Finest Suburb</div></div></div>
+        <div class="loc-foot"><div class="loc-tag">Apartments</div><div class="loc-tag">Commercial</div><div class="loc-tag">Rentals</div></div></div>
+      <div class="loc-card"><div class="loc-vis"><div class="loc-bg lm"></div><div class="loc-ov"></div><div class="loc-pill">Western Uganda</div>
+        <svg style="position:absolute;bottom:0;opacity:.45" viewBox="0 0 300 160" fill="none" width="100%" height="130">
+          <rect x="88" y="40" width="74" height="120" fill="#B8860B" opacity=".22"/><rect x="246" y="78" width="42" height="82" fill="#B8860B" opacity=".14"/>
+          <line x1="0" y1="158" x2="300" y2="158" stroke="#B8860B" stroke-width="1.5" opacity=".32"/>
+        </svg>
+        <div class="loc-bot"><div class="loc-city">Mbarara</div><div class="loc-tagline">Uganda's Fast-Growing Western Hub</div></div></div>
+        <div class="loc-foot"><div class="loc-tag">Apartments</div><div class="loc-tag">Short Stays</div><div class="loc-tag">Affordable</div></div></div>
+    </div>
+  </div>
+</section>
+<section class="properties reveal" id="properties">
+  <div class="props-head">
+    <div>
+      <div class="ey">Available Now</div>
+      <h2>Featured <em>Properties</em></h2>
+      <div class="filters">
+        <button class="fb act" onclick="fp('all',this)">All</button>
+        <button class="fb" onclick="fp('apt',this)">Apartments</button>
+        <button class="fb" onclick="fp('airbnb',this)">Short Stays</button>
+        <button class="fb" onclick="fp('com',this)">Commercial</button>
+      </div>
+    </div>
+    <a href="#contact" class="btn-g">Enquire Now</a>
+  </div>
+  <div class="pg" id="pg">
+    <div class="pc" data-t="apt"><div class="pv p1">
+      <svg width="110" height="92" viewBox="0 0 120 100" fill="none" opacity=".6">
+        <rect x="10" y="16" width="100" height="82" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <rect x="4" y="10" width="112" height="8" fill="#B8860B" opacity=".28"/>
+        <rect x="18" y="27" width="11" height="10" fill="#B8860B" opacity=".4"/><rect x="36" y="27" width="11" height="10" fill="#B8860B" opacity=".4"/>
+        <rect x="54" y="27" width="11" height="10" fill="#B8860B" opacity=".4"/><rect x="72" y="27" width="11" height="10" fill="#B8860B" opacity=".4"/>
+        <rect x="18" y="44" width="11" height="10" fill="#B8860B" opacity=".4"/><rect x="36" y="44" width="11" height="10" fill="#B8860B" opacity=".4"/>
+        <rect x="54" y="44" width="11" height="10" fill="#B8860B" opacity=".4"/><rect x="72" y="44" width="11" height="10" fill="#B8860B" opacity=".4"/>
+        <rect x="44" y="74" width="32" height="24" rx="12" stroke="#B8860B" stroke-width="1.2" fill="none"/>
+      </svg>
+      <div class="p-type">Apartment</div><div class="p-loc">Kololo</div></div>
+      <div class="pb"><div class="p-name">Kololo Hill Suites</div><div class="p-addr">Kololo, Kampala</div>
+      <div class="p-price-row"><div><div class="p-from">From</div><div class="p-price">1,800,000<span class="p-per">UGX / mo</span></div></div><div class="p-badge">Best Value</div></div>
+      <div class="p-div"></div><div class="p-meta"><span>2 Beds</span><span>City View</span><span>Security</span></div></div></div>
+    <div class="pc" data-t="airbnb"><div class="pv p2">
+      <svg width="110" height="92" viewBox="0 0 120 100" fill="none" opacity=".6">
+        <rect x="14" y="28" width="92" height="70" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <path d="M4 30 L60 6 L116 30" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <rect x="24" y="42" width="14" height="12" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="53" y="42" width="14" height="12" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="82" y="42" width="14" height="12" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="44" y="62" width="32" height="36" rx="16" stroke="#B8860B" stroke-width="1.2" fill="none"/>
+      </svg>
+      <div class="p-type" style="background:rgba(14,80,40,.9);color:#5AE88A;">5-Star Stay</div><div class="p-loc">Entebbe</div></div>
+      <div class="pb"><div class="p-name">Lakeside Apartments</div><div class="p-addr">5-Star Apartments, Entebbe</div>
+      <div class="p-price-row"><div><div class="p-from">Per Night</div><div class="p-price">250,000<span class="p-per">UGX / night</span></div></div><div class="p-badge">5 ★</div></div>
+      <div class="p-div"></div><div class="p-meta"><span>4 Beds</span><span>Lake View</span><span>Pool</span></div></div></div>
+    <div class="pc" data-t="com"><div class="pv p3">
+      <svg width="110" height="92" viewBox="0 0 120 100" fill="none" opacity=".6">
+        <rect x="6" y="16" width="108" height="82" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <rect x="6" y="16" width="108" height="12" fill="#B8860B" opacity=".09"/>
+        <rect x="14" y="34" width="14" height="12" stroke="#B8860B" stroke-width="1" fill="none"/><rect x="34" y="34" width="14" height="12" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="54" y="34" width="14" height="12" stroke="#B8860B" stroke-width="1" fill="none"/><rect x="74" y="34" width="14" height="12" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="36" y="58" width="48" height="40" stroke="#B8860B" stroke-width="1.2" fill="none"/>
+        <line x1="60" y1="58" x2="60" y2="98" stroke="#B8860B" stroke-width="1"/>
+      </svg>
+      <div class="p-type" style="background:rgba(44,26,0,.9);color:#E4B94A;">Commercial</div><div class="p-loc">CBD Kampala</div></div>
+      <div class="pb"><div class="p-name">City Square Office</div><div class="p-addr">Kampala Road, CBD</div>
+      <div class="p-price-row"><div><div class="p-from">From</div><div class="p-price">3,500,000<span class="p-per">UGX / mo</span></div></div><div class="p-badge">Prime</div></div>
+      <div class="p-div"></div><div class="p-meta"><span>280 sqm</span><span>Open Plan</span><span>Parking</span></div></div></div>
+    <div class="pc" data-t="apt"><div class="pv p4">
+      <svg width="110" height="92" viewBox="0 0 120 100" fill="none" opacity=".6">
+        <rect x="20" y="13" width="80" height="85" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <rect x="14" y="7" width="92" height="8" fill="#B8860B" opacity=".28"/>
+        <rect x="28" y="24" width="10" height="9" fill="#B8860B" opacity=".4"/><rect x="44" y="24" width="10" height="9" fill="#B8860B" opacity=".4"/>
+        <rect x="60" y="24" width="10" height="9" fill="#B8860B" opacity=".4"/><rect x="76" y="24" width="10" height="9" fill="#B8860B" opacity=".4"/>
+        <rect x="28" y="40" width="10" height="9" fill="#B8860B" opacity=".4"/><rect x="44" y="40" width="10" height="9" fill="#B8860B" opacity=".4"/>
+        <rect x="48" y="70" width="24" height="28" rx="12" stroke="#B8860B" stroke-width="1.2" fill="none"/>
+      </svg>
+      <div class="p-type">Apartment</div><div class="p-loc">Ntinda</div></div>
+      <div class="pb"><div class="p-name">Ntinda Heights</div><div class="p-addr">Ntinda, Kampala</div>
+      <div class="p-price-row"><div><div class="p-from">From</div><div class="p-price">1,200,000<span class="p-per">UGX / mo</span></div></div></div>
+      <div class="p-div"></div><div class="p-meta"><span>2 Beds</span><span>2 Baths</span><span>Secure</span></div></div></div>
+    <div class="pc" data-t="airbnb"><div class="pv p5">
+      <svg width="110" height="92" viewBox="0 0 120 100" fill="none" opacity=".6">
+        <rect x="12" y="24" width="96" height="74" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <path d="M4 26 L60 4 L116 26" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <rect x="22" y="38" width="12" height="11" stroke="#B8860B" stroke-width="1" fill="none"/><rect x="42" y="38" width="12" height="11" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="66" y="38" width="12" height="11" stroke="#B8860B" stroke-width="1" fill="none"/><rect x="86" y="38" width="12" height="11" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="48" y="58" width="24" height="40" rx="12" stroke="#B8860B" stroke-width="1.2" fill="none"/>
+      </svg>
+      <div class="p-type" style="background:rgba(14,80,40,.9);color:#5AE88A;">5-Star Stay</div><div class="p-loc">Entebbe</div></div>
+      <div class="pb"><div class="p-name">The Garden Apartments</div><div class="p-addr">Entebbe Road, Entebbe</div>
+      <div class="p-price-row"><div><div class="p-from">Per Night</div><div class="p-price">180,000<span class="p-per">UGX / night</span></div></div><div class="p-badge">5 ★</div></div>
+      <div class="p-div"></div><div class="p-meta"><span>2 Beds</span><span>Garden</span><span>WiFi</span></div></div></div>
+    <div class="pc" data-t="com"><div class="pv p6">
+      <svg width="110" height="92" viewBox="0 0 120 100" fill="none" opacity=".6">
+        <rect x="6" y="20" width="108" height="78" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <rect x="6" y="20" width="108" height="12" fill="#B8860B" opacity=".09"/>
+        <rect x="14" y="40" width="16" height="13" stroke="#B8860B" stroke-width="1" fill="none"/><rect x="36" y="40" width="16" height="13" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="58" y="40" width="16" height="13" stroke="#B8860B" stroke-width="1" fill="none"/><rect x="80" y="40" width="16" height="13" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="30" y="64" width="60" height="34" stroke="#B8860B" stroke-width="1.2" fill="none"/>
+        <line x1="60" y1="64" x2="60" y2="98" stroke="#B8860B" stroke-width="1"/>
+      </svg>
+      <div class="p-type" style="background:rgba(44,26,0,.9);color:#E4B94A;">Commercial</div><div class="p-loc">Ntinda</div></div>
+      <div class="pb"><div class="p-name">Ntinda Commercial Hub</div><div class="p-addr">Ntinda Shopping Centre</div>
+      <div class="p-price-row"><div><div class="p-from">From</div><div class="p-price">2,200,000<span class="p-per">UGX / mo</span></div></div><div class="p-badge">Retail</div></div>
+      <div class="p-div"></div><div class="p-meta"><span>150 sqm</span><span>Ground Fl.</span><span>Parking</span></div></div></div>
+    <div class="pc" data-t="apt"><div class="pv p7">
+      <svg width="110" height="92" viewBox="0 0 120 100" fill="none" opacity=".6">
+        <rect x="10" y="10" width="100" height="88" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <rect x="4" y="4" width="112" height="8" fill="#B8860B" opacity=".28"/>
+        <rect x="18" y="20" width="11" height="10" fill="#B8860B" opacity=".4"/><rect x="36" y="20" width="11" height="10" fill="#B8860B" opacity=".4"/>
+        <rect x="54" y="20" width="11" height="10" fill="#B8860B" opacity=".4"/><rect x="72" y="20" width="11" height="10" fill="#B8860B" opacity=".4"/>
+        <rect x="18" y="37" width="11" height="10" fill="#B8860B" opacity=".4"/><rect x="36" y="37" width="11" height="10" fill="#B8860B" opacity=".4"/>
+        <rect x="46" y="70" width="28" height="28" rx="14" stroke="#B8860B" stroke-width="1.2" fill="none"/>
+      </svg>
+      <div class="p-type">Apartment</div><div class="p-loc">Kampala</div></div>
+      <div class="pb"><div class="p-name">The Kololo Residence</div><div class="p-addr">Kololo Hill, Kampala</div>
+      <div class="p-price-row"><div><div class="p-from">From</div><div class="p-price">1,800,000<span class="p-per">UGX / mo</span></div></div></div>
+      <div class="p-div"></div><div class="p-meta"><span>3 Beds</span><span>2 Baths</span><span>Furnished</span></div></div></div>
+    <div class="pc" data-t="apt"><div class="pv p8">
+      <svg width="110" height="92" viewBox="0 0 120 100" fill="none" opacity=".6">
+        <rect x="14" y="22" width="92" height="76" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <path d="M6 24 L60 4 L114 24" stroke="#B8860B" stroke-width="1.4" fill="none"/>
+        <rect x="22" y="36" width="12" height="11" stroke="#B8860B" stroke-width="1" fill="none"/><rect x="42" y="36" width="12" height="11" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="66" y="36" width="12" height="11" stroke="#B8860B" stroke-width="1" fill="none"/><rect x="86" y="36" width="12" height="11" stroke="#B8860B" stroke-width="1" fill="none"/>
+        <rect x="48" y="70" width="24" height="28" rx="12" stroke="#B8860B" stroke-width="1.2" fill="none"/>
+      </svg>
+      <div class="p-type">Apartment</div><div class="p-loc">Mbarara</div></div>
+      <div class="pb"><div class="p-name">Mbarara City Flats</div><div class="p-addr">High Street, Mbarara</div>
+      <div class="p-price-row"><div><div class="p-from">Starting From</div><div class="p-price">800,000<span class="p-per">UGX / mo</span></div></div><div class="p-badge">Affordable</div></div>
+      <div class="p-div"></div><div class="p-meta"><span>1 Bed</span><span>Self-Contained</span><span>Secure</span></div></div></div>
+  </div>
+</section>
+<section class="about reveal" id="about">
+  <div class="about-wrap">
+    <div><div class="founder">
+      <div class="f-bg"></div><div class="f-accent"></div>
+      <div class="f-mono">MA</div>
+      <div class="f-info"><div class="f-name">Mubangizi Albert</div><div class="f-role">Founder &amp; Director · Est. 2023</div></div>
+    </div></div>
+    <div>
+      <div class="ey">Our Story</div>
+      <h2>Built on Trust,<br/><em>Driven by Vision</em></h2>
+      <div class="a-quote">"Every property we manage is a promise kept — to our tenants, our clients, and Uganda."</div>
+      <p class="a-text">Founded in 2023 by Mubangizi Albert, Sam Properties was built on one belief: everyone deserves a great space. From Kampala's vibrant Kololo hill to Entebbe's peaceful lakeshore and Mbarara's growing skyline.</p>
+      <div class="pillars">
+        <div class="pillar"><div class="pl-icon">🏆</div><div class="pl-title">Excellence</div><div class="pl-text">Every property maintained to the highest standard.</div></div>
+        <div class="pillar"><div class="pl-icon">🤝</div><div class="pl-title">Trust</div><div class="pl-text">Clear pricing, honest dealings, no hidden costs.</div></div>
+        <div class="pillar"><div class="pl-icon">📍</div><div class="pl-title">Location</div><div class="pl-text">5 prime addresses across Uganda's most desirable areas.</div></div>
+        <div class="pillar"><div class="pl-icon">💼</div><div class="pl-title">Full Service</div><div class="pl-text">From one-night stays to long-term commercial leases.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="why reveal">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="ey">Why Sam Properties</div>
+    <h2>The <em>Sam Standard</em></h2>
+    <div class="why-grid">
+      <div class="wc"><div class="wn">01</div><div class="wi">🏙️</div><div class="wt">Premium Quality</div><p class="wd">Every property carefully vetted and maintained to luxury standards.</p></div>
+      <div class="wc"><div class="wn">02</div><div class="wi">📍</div><div class="wt">5 Prime Locations</div><p class="wd">Kampala, Kololo, Entebbe, Ntinda &amp; Mbarara covered.</p></div>
+      <div class="wc"><div class="wn">03</div><div class="wi">⭐</div><div class="wt">5-Star Experience</div><p class="wd">Personal, responsive service that goes beyond expectations.</p></div>
+      <div class="wc"><div class="wn">04</div><div class="wi">💰</div><div class="wt">Fair Pricing</div><p class="wd">Premium properties at realistic Uganda prices.</p></div>
+    </div>
+  </div>
+</section>
+<section class="contact reveal" id="contact">
+  <div class="ct-wrap">
+    <div>
+      <div class="ey">Get In Touch</div>
+      <h2>Find Your<br/><em>Perfect Space</em></h2>
+      <p class="sub" style="margin-top:14px">Whether renting, booking a short stay, or leasing commercial space — we respond fast.</p>
+      <div class="ct-details">
+        <div class="cd"><div class="cd-ic">📞</div><div><div class="cd-lbl">Phone / WhatsApp</div><div class="cd-val">+256 751 015 439</div></div></div>
+        <div class="cd"><div class="cd-ic">📍</div><div><div class="cd-lbl">Our Locations</div><div class="cd-val">Kampala · Kololo · Entebbe · Ntinda · Mbarara</div></div></div>
+        <div class="cd"><div class="cd-ic">🕐</div><div><div class="cd-lbl">Office Hours</div><div class="cd-val">Mon – Sat, 8am – 6pm</div></div></div>
+      </div>
+    </div>
+    <div>
+      <form class="cf" onsubmit="submitForm(event)">
+        <div class="cf2">
+          <div class="cg"><label class="cl">Full Name</label><input class="ci" type="text" placeholder="Your name"/></div>
+          <div class="cg"><label class="cl">Phone</label><input class="ci" type="tel" placeholder="+256 ..."/></div>
+        </div>
+        <div class="cg"><label class="cl">I'm Looking For</label>
+          <select class="cs"><option value="">Select a service...</option><option>Apartment / Long-term Rental</option><option>5-Star Short Stay / Airbnb</option><option>Commercial Space</option><option>General Enquiry</option></select></div>
+        <div class="cg"><label class="cl">Preferred Location</label>
+          <select class="cs"><option value="">Select location...</option><option>Kampala</option><option>Kololo</option><option>Entebbe</option><option>Ntinda</option><option>Mbarara</option></select></div>
+        <div class="cg"><label class="cl">Message</label><textarea class="cta" placeholder="Tell us what you're looking for..."></textarea></div>
+        <button type="submit" class="csub">Send Enquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="ft">
+    <div><div class="fb-brand">Sam Properties</div><div class="fb-tag">Est. 2023 · Uganda</div><p class="fb-desc">Luxury apartments, 5-star short stays &amp; commercial spaces across Uganda's finest addresses.</p></div>
+    <div><div class="fc-title">Services</div><ul class="fc-links"><li><a href="#services">Apartments</a></li><li><a href="#services">5-Star Stays</a></li><li><a href="#services">Commercial</a></li></ul></div>
+    <div><div class="fc-title">Locations</div><ul class="fc-links"><li><a href="#locations">Kampala</a></li><li><a href="#locations">Kololo</a></li><li><a href="#locations">Entebbe</a></li><li><a href="#locations">Ntinda</a></li><li><a href="#locations">Mbarara</a></li></ul></div>
+    <div><div class="fc-title">Contact</div><ul class="fc-links"><li><a href="tel:+256751015439">+256 751 015 439</a></li><li><a href="#contact">Send Enquiry</a></li></ul></div>
+  </div>
+  <div class="fb-bot"><div class="fc">© 2023 Sam Properties Uganda. All rights reserved.</div><div class="fe">Apartments · Short Stays · Commercial Spaces</div></div>
+</footer>
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('on',scrollY>50));
+const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('on');}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(r=>ro.observe(r));
+function toggleMenu(){const ul=document.querySelector('.nav-mid');const open=ul.style.display==='flex';if(open){ul.style.display='';}else{Object.assign(ul.style,{display:'flex',flexDirection:'column',position:'fixed',top:'56px',left:'0',right:'0',background:'rgba(8,8,8,.97)',padding:'20px 28px',gap:'16px',borderBottom:'1px solid rgba(184,134,11,.1)',zIndex:'998'});}}
+function fp(type,btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('act'));btn.classList.add('act');document.querySelectorAll('.pc').forEach(c=>{c.style.display=(type==='all'||c.dataset.t===type)?'':'none';});}
+function submitForm(e){e.preventDefault();const b=e.target.querySelector('.csub');b.textContent='✓ Sent! We\'ll contact you shortly.';b.style.cssText='background:#0E3020;color:#5AE88A;width:100%;padding:17px;border:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;';setTimeout(()=>{b.style.cssText='';b.textContent='Send Enquiry →';e.target.reset();},4000);}
+</script>
+</body>
+</html>
+Select All → Copy → Paste into GitHub → Commit changes! 🎉
